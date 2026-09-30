@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id" data-pal="senja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Med Info Sehat – Kenali Tubuhmu</title>
+<meta name="description" content="Med Info Sehat: informasi kesehatan, peta organ tubuh, pencarian penyakit dan obat, serta kebiasaan hidup sehat.">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="prog"></div>
+<div class="bgfx" aria-hidden="true"><i class="bl b1"></i><i class="bl b2"></i><i class="bl b3"></i></div>
+<div class="pal" role="group" aria-label="Pilih tema warna"><span>Tema</span>
+<button data-p="samudra" aria-label="Tema Samudra" aria-pressed="false" style="background:linear-gradient(135deg,#E0457B,#1F8A7D)"></button>
+<button data-p="senja" aria-label="Tema Senja" aria-pressed="true" style="background:linear-gradient(135deg,#FF5C39,#7B4DFF)"></button>
+<button data-p="hutan" aria-label="Tema Hutan" aria-pressed="false" style="background:linear-gradient(135deg,#E58A00,#2E9E4F)"></button></div>
+<div class="wrap">
+<header>
+<div class="brandrow">
+  <a class="brand" href="#" aria-label="Med Info Sehat, ke atas">
+    <svg class="logo" viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="15" fill="var(--acc)"/><path d="M24 36s-11-6.6-11-15a6.2 6.2 0 0 1 11-3.8A6.2 6.2 0 0 1 35 21c0 8.4-11 15-11 15z" fill="#fff"/><path d="M14 25h7l2-4 3 7 2-3h6" fill="none" stroke="var(--acc)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <span><b>Med Info Sehat</b><small>Informasi kesehatan yang mudah dipahami</small></span>
+  </a>
+</div>
+  <h1>Kenali tubuhmu, mulai dari yang ini.</h1>
+  <p class="lead">Sentuh bagian tubuh pada peta untuk melihat apa fungsinya, tanda yang perlu diwaspadai, dan kebiasaan yang menjaganya.</p>
+<svg class="ecg" viewBox="0 0 400 64" aria-hidden="true"><path d="M0 34 H90 L104 34 L114 8 L128 58 L140 20 L150 34 H250 L264 34 L274 8 L288 58 L300 20 L310 34 H400"/></svg>
+  <div class="fact"><span class="fi" id="fi">💡</span><p id="ft"></p><button class="chip" id="fn">Fakta lain</button></div>
+</header>
+
+<div class="map">
+  <div class="body" aria-hidden="false">
+    <svg viewBox="0 0 200 400" role="img" aria-label="Siluet tubuh dengan titik organ yang bisa dipilih">
+      <circle class="sil" cx="100" cy="38" r="28"/>
+      <rect class="sil" x="88" y="62" width="24" height="18" rx="6"/>
+      <rect class="sil" x="54" y="76" width="92" height="150" rx="38"/>
+      <rect class="sil" x="26" y="84" width="24" height="140" rx="12"/>
+      <rect class="sil" x="150" y="84" width="24" height="140" rx="12"/>
+      <rect class="sil" x="62" y="220" width="34" height="170" rx="16"/>
+      <rect class="sil" x="104" y="220" width="34" height="170" rx="16"/>
+      <g id="hots"></g>
+    </svg>
+  </div>
+  <div>
+    <div class="chips" id="chips" role="group" aria-label="Pilih organ"></div>
+    <article class="panel" id="panel" aria-live="polite"></article>
+  </div>
+</div>
+
+<section>
+  <h2 class="sec">Hitung indeks massa tubuh</h2>
+  <div class="bmi">
+    <div>
+      <label>Berat badan (kg)<input id="w" type="number" inputmode="decimal" min="10" max="300" placeholder="mis. 62"></label>
+      <label>Tinggi badan (cm)<input id="h" type="number" inputmode="decimal" min="80" max="250" placeholder="mis. 165"></label>
+      <button class="go" id="calc">Hitung IMT</button>
+    </div>
+    <div class="res" aria-live="polite" id="res"><p style="color:var(--mut);margin:0">Isi berat dan tinggi badan, lalu pilih Hitung IMT. Angka ini untuk orang dewasa dan hanya gambaran awal, bukan diagnosis.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2 class="sec">Lima kebiasaan kecil, dampak besar</h2>
+  <div class="habits">
+    <div><h3>Tidur 7–9 jam</h3><p>Untuk orang dewasa, tidur cukup membantu tubuh memulihkan diri dan mengatur hormon. Jam tidur yang teratur sama pentingnya dengan lamanya.</p></div>
+    <div><h3>Bergerak 150 menit</h3><p>WHO menganjurkan dewasa beraktivitas fisik intensitas sedang (jalan cepat, bersepeda santai) minimal 150 menit per minggu.</p></div>
+    <div><h3>Minum air cukup</h3><p>Pantau warna urine: kuning pucat berarti cukup. Kebutuhan tiap orang berbeda menurut cuaca dan aktivitas.</p></div>
+    <div><h3>Piring beragam</h3><p>Separuh piring berisi sayur dan buah, sisanya protein dan karbohidrat. Batasi gula, garam, dan gorengan.</p></div>
+    <div><h3>Cek rutin</h3><p>Tekanan darah, gula darah, dan kolesterol perlu diperiksa berkala, terutama bila ada riwayat keluarga.</p></div>
+  </div>
+</section>
+
+<section id="cari">
+  <h2 class="sec">Cari penyakit atau obat</h2>
+  <div class="sbox"><input id="q" type="search" placeholder="Coba ketik: demam, maag, paracetamol..." aria-label="Cari penyakit atau obat" autocomplete="off"></div>
+  <div class="chips" id="tabs" role="group" aria-label="Filter" style="margin:16px 0 8px"></div>
+  <div class="grid" id="out" aria-live="polite"></div>
+  <p class="note">Informasi obat bersifat umum. Dosis dan kecocokan obat berbeda untuk tiap orang, jadi ikuti aturan pakai di kemasan atau anjuran dokter/apoteker. Golongan obat dapat berbeda menurut kekuatan dan kemasan, jadi selalu lihat logo lingkaran pada kemasan (hijau: bebas, biru: bebas terbatas, merah dengan huruf K: keras). Obat keras hanya boleh dipakai dengan resep.</p>
+</section>
+
+<section id="gaya">
+  <h2 class="sec">🧠 Lifestyle &amp; health habits</h2>
+  <div class="life">
+    <div class="ring"><svg viewBox="0 0 120 120" aria-hidden="true"><circle class="bg" cx="60" cy="60" r="52"/><circle class="fg" id="fg" cx="60" cy="60" r="52"/></svg><div class="lb"><span id="pc">0%</span><small id="ps">Centang kebiasaan hari ini</small></div></div>
+    <ul id="chk"></ul>
+  </div>
+  <div class="habits" id="mind">
+    <div><h3>🧘 Kelola stres</h3><p>Napas pelan dan dalam membantu tubuh lebih tenang. Contoh: tarik napas 4 detik, hembuskan 6 detik, ulangi beberapa kali saat tegang.</p></div>
+    <div><h3>📵 Jeda layar</h3><p>Aturan 20-20-20: tiap 20 menit, lihat objek sejauh 6 meter selama 20 detik.</p></div>
+    <div><h3>🤝 Tetap terhubung</h3><p>Hubungan sosial yang baik berkaitan dengan kesehatan mental yang lebih baik. Luangkan waktu untuk bercakap dengan orang terdekat.</p></div>
+    <div><h3>☀️ Cahaya pagi</h3><p>Cahaya alami di pagi hari membantu mengatur jam biologis tubuh, termasuk pola tidur.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="alert">
+    <h2>Segera cari pertolongan medis bila:</h2>
+    <ul>
+      <li>Nyeri dada menekan atau menjalar ke lengan/rahang</li>
+      <li>Sesak napas mendadak</li>
+      <li>Wajah miring, lengan lemah, atau bicara pelo</li>
+      <li>Sakit kepala hebat yang datang tiba-tiba</li>
+      <li>Muntah atau BAB berdarah</li>
+      <li>Demam tinggi dengan kaku leher atau kejang</li>
+    </ul>
+    <p style="margin:12px 0 0">Di Indonesia, hubungi 119 (layanan darurat medis Kemenkes, bebas pulsa) atau datang ke IGD terdekat.</p>
+  </div>
+</section>
+
+<footer><b>Med Info Sehat</b><br>Informasi mengacu pada pedoman umum Kemenkes RI dan WHO. Halaman ini bersifat edukasi dan tidak menggantikan pemeriksaan, diagnosis, atau saran dari dokter.</footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
